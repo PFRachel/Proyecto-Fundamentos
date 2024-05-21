@@ -75,7 +75,7 @@ def index_map(pot_value, list_length):
     max_pot_value = 65535
     index = int(pot_value / max_pot_value * list_length)
     return min(index, list_length - 1)
-
+# codigo para el potenciometro
 while True:
     lectura = potenciometro.value
     
@@ -91,7 +91,7 @@ while True:
     
     
 
-# programa 
+# programa  leds
 def iniciar_leds():
     clock.value = 0
     data.value = 1
@@ -115,7 +115,7 @@ def poner_led(led_encender):
         data.value = 0
         clock.value = 1
         
-
+# paletas 
 while True:
     
     uno = paleta_uno.value
@@ -148,7 +148,7 @@ while True:
                 buzzer.value = False  # Apaga el buzzer
                 iniciar_leds()
                 gol = 1
-                
+          # portero eleccion      
     if jugador_2 == True:
         while i <5:
             portero = random.randint(0,3)
